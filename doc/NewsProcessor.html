@@ -1,0 +1,2155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>NewsProcessor API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>NewsProcessor</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import pandas as pd
+import numpy as np
+import os
+import gzip
+from collections import Counter
+from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics import jaccard_score
+import csv
+from difflib import SequenceMatcher
+import os.path
+
+
+class NewsProcessor:
+    &#34;&#34;&#34;
+    The NewsProcessor class is designed to process and analyze news data. It provides methods to ensure the 
+    correctness and formatting of news data for analysis purposes, including removing inappropriate news, handling 
+    the number of subjects, eliminating duplicates, and more. Additionally, it offers functionality to 
+    generate data pairs and calculate Jaccard and cosine similarities between news pairs.
+
+    Attributes:
+        lang (list): The list of languages to filter the news data.
+        columns (list): The list of columns to keep in the news data.
+        news (list): The list of news data.
+        df (DataFrame): The DataFrame of news data.
+        df_codes (DataFrame): The DataFrame of news codes.
+        valid_subjects (set): The set of valid subjects.
+        df_encoded (DataFrame): The DataFrame of news data with encoded subjects, having binary columns for each subject indicating whether a news has that subject or not. 
+    &#34;&#34;&#34;
+    
+    def __init__(self, lang: list = [&#39;en&#39;, &#39;EN&#39;], columns: list = [&#39;guid&#39;, &#39;data.versionCreated&#39;, &#39;data.headline&#39;, &#39;data.body&#39;, &#39;data.subjects&#39;]) -&gt; None:
+        &#34;&#34;&#34;
+        Constructor method.
+
+        Args:
+            lang (list): The list of languages to filter the news data.
+            columns (list): The list of columns to keep in the news dataframe.
+        &#34;&#34;&#34;
+        self.lang = lang
+        self.columns = columns
+        self.news = None
+        self.df = None
+        self.df_codes = None
+        self.valid_subjects = None
+        self.df_encoded = None
+
+
+    def load_news_codes(self, path: str) -&gt; None:
+        &#34;&#34;&#34;
+        Load the news codes file into a DataFrame and sets the index for quick access. 
+        The codes are used later for filtering valid subjects.
+
+        Args:
+            path (str): The path to the news codes file.
+        &#34;&#34;&#34;
+        self.df_codes = pd.read_csv(path, sep=&#39;;&#39;)
+        self.df_codes.set_index(&#39;Code&#39;, inplace=True)
+        self.valid_subjects = set(self.df_codes.index)
+        
+
+    def load_news(self, directory: str) -&gt; None:
+        &#34;&#34;&#34;
+        Load news data from JSON files in a given directory. It iterates over the files, reads 
+        each file using pd.read_json, and concatenates the resulting DataFrame to the main DataFrame (self.df).
+
+        Args:
+            directory (str): The directory containing the json files.
+        &#34;&#34;&#34;
+        # initialize the dataframe (empty)
+        self.df = pd.DataFrame()
+
+        # iterate over all json files in the directory
+        for filename in os.listdir(directory):
+            # check the correct file extension
+            if filename.endswith(&#34;.txt.gz&#34;):
+                filepath = os.path.join(directory, filename)
+                # read the json file
+                with gzip.open(filepath, &#39;r&#39;) as f:
+                    news = pd.read_json(f)
+
+                # append the data from the current file to main dataframe (self.df)
+                self.df = pd.concat([self.df, pd.json_normalize(news[&#39;Items&#39;])])
+
+        
+    def filter_lang(self, lang: list = [&#39;en&#39;, &#39;EN&#39;]) -&gt; None:
+        &#34;&#34;&#34;
+        Filter the news data based on the specified languages.
+        &#34;&#34;&#34;
+        self.df = self.df[self.df[&#39;data.language&#39;].isin(self.lang)]
+        
+
+    def keep_columns(self) -&gt; None:
+        &#34;&#34;&#34;
+        Select and rename specific columns from the DataFrame and drop the rest. 
+        Use the columns from the &#39;columns&#39; attribute.
+        &#34;&#34;&#34;
+        self.df = self.df[self.columns]
+        self.df.rename(columns={&#39;data.versionCreated&#39;: &#39;date&#39;, &#39;data.headline&#39;: &#39;headline&#39;, &#39;data.body&#39;: &#39;body&#39;, &#39;data.subjects&#39;: &#39;subjects&#39;}, inplace=True)
+        
+
+    def drop_duplicates(self) -&gt; None:
+        &#34;&#34;&#34;
+        Drop duplicate rows in the data based on the &#39;headline&#39; and &#39;guid&#39; columns.
+        &#34;&#34;&#34;
+        self.df.drop_duplicates(subset=[&#39;headline&#39;], inplace=True)
+        self.df.drop_duplicates(subset=[&#39;guid&#39;], inplace=True)
+
+        
+    def filter_valid_subjects(self) -&gt; None:
+        &#34;&#34;&#34;
+        Filter the &#39;subjects&#39; column for each news to include only valid subjects based on the news codes file. 
+        It checks each subject in the &#39;subjects&#39; list and keeps only those that exist in the set of valid subjects.
+        &#34;&#34;&#34;
+        # check that each subject is in the set of valid subjects
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: list(set([s for s in subjects if s in self.valid_subjects])))
+
+
+    def filter_unique_subjects_per_news(self) -&gt; None:
+        &#34;&#34;&#34;
+        Filter the &#39;subjects&#39; column for each news to include only unique subjects. Also, convert the &#39;subjects&#39; column to a list.
+        &#34;&#34;&#34;
+        # use set function to remove duplicates
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: list(set(subjects)))
+
+
+    def sort_subjects(self) -&gt; None:
+        &#34;&#34;&#34; 
+        Sort the &#39;subjects&#39; for each news alphabetically. This ensures that the same subjects are represented in the same order, making it 
+        easier to compare subjects across news.
+        &#34;&#34;&#34;
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: sorted(subjects))
+
+
+    def filter_subjects_count(self) -&gt; None:
+        &#34;&#34;&#34;
+        Count the number of subjects for each news and keep only the news with subjects count within the interquartile range (IQR).
+        &#34;&#34;&#34;
+        # create a momentary column with the number of subjects per news
+        self.df[&#39;subjects_length&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: len(subjects))
+
+        # calculate the interquartile range (IQR)
+        Q1 = self.df[&#39;subjects_length&#39;].quantile(0.25)
+        Q3 = self.df[&#39;subjects_length&#39;].quantile(0.75)
+
+        # calculate the IQR
+        IQR = Q3 - Q1
+
+        # filter out the news with subjects length outside the IQR
+        self.df = self.df[(self.df[&#39;subjects_length&#39;] &gt;= Q1 - 1.5 * IQR) &amp; (self.df[&#39;subjects_length&#39;] &lt;= Q3 + 1.5 * IQR)]
+
+        # drop the &#39;subjects_length&#39; column
+        self.df.drop(columns=[&#39;subjects_length&#39;], inplace=True)
+
+
+    def filter_subject_appearances(self, min_appearances: int, max_appearances: int) -&gt; None:
+        &#34;&#34;&#34;
+        Filter out the subjects that appear less than min_appearances or more than max_appearances.
+
+        Args:
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+
+        References:
+            https://docs.python.org/3/library/collections.html
+        &#34;&#34;&#34;
+        # flatten the subjects list to get a list of all subjects in the dataframe
+        subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+        # count the number of times each subject appears
+        subject_counts = Counter(subjects)
+
+        # find subjects that are to be filtered out (appear less than min_appearances or more than max_appearances)
+        subjects_to_filter = {s for s, count in subject_counts.items() 
+                            if count &lt; min_appearances or count &gt; max_appearances}
+        
+        # filter out the subjects
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: [s for s in subjects if s not in subjects_to_filter])
+
+            
+    def filter_empty_subjects(self) -&gt; None:
+        &#34;&#34;&#34;
+        Filter out the news with empty &#39;subjects&#39;.
+        &#34;&#34;&#34;
+        # keep only the news with subjects list length greater than 0
+        self.df = self.df[self.df[&#39;subjects&#39;].map(len) &gt; 0]
+
+
+    def preprocess(self, file: str, min_appearances: int, max_appearances: int) -&gt; None:
+        &#34;&#34;&#34;
+        Preprocess the news data by applying all the preprocessing steps.
+
+        In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load 
+        news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects, 
+        sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.
+
+        Args:
+            file (str): The path to the news data file.
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+        &#34;&#34;&#34;
+        print(&#34;Preprocessing news data...&#34;)
+
+        # load the news data
+        self.load_news(file)
+        print(f&#34;Size before filtering: {self.df.shape}.&#34;)
+
+        # apply the preprocessing steps
+        self.filter_lang()
+        self.keep_columns()
+        self.drop_duplicates()
+        self.filter_valid_subjects()
+        self.filter_unique_subjects_per_news()
+        self.sort_subjects()
+        self.filter_subject_appearances(min_appearances, max_appearances)
+        self.filter_subjects_count()
+        self.filter_empty_subjects()
+
+        # reset the index
+        self.df.reset_index(drop=True, inplace=True)
+
+        print(f&#34;Size after filtering: {self.df.shape}.&#34;)
+        print(&#34;Preprocessing complete.&#34;)
+
+
+    def preprocess_debug(self, file: str, min_appearances: int, max_appearances: int) -&gt; None:
+        &#34;&#34;&#34;
+        Method is similar to `preprocess`, but it prints the size of the DataFrame after 
+        each preprocessing step. It provides additional information for debugging and testing purposes.
+
+        In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load 
+        news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects, 
+        sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.
+
+        Args:
+            file (str): The path to the news data file.
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+        &#34;&#34;&#34;
+        # load the news data
+        print(&#34;Preprocessing news data... (debug mode)&#34;)
+        self.load_news(file)
+
+        # apply the preprocessing steps
+        print(f&#34;Size before filtering: {self.df.shape}.&#34;)
+        self.filter_lang()
+        print(f&#34;Size after filtering language: {self.df.shape}.&#34;)
+        self.keep_columns()
+        print(f&#34;Size after keeping columns: {self.df.shape}.&#34;)
+        self.drop_duplicates()
+        print(f&#34;Size after dropping duplicates: {self.df.shape}.&#34;)
+        self.filter_valid_subjects()
+        print(f&#34;Size after filtering valid subjects: {self.df.shape}.&#34;)
+        self.filter_unique_subjects_per_news()
+        print(f&#34;Size after filtering unique subjects per news: {self.df.shape}.&#34;)
+        self.sort_subjects()
+        print(f&#34;Size after sorting subjects: {self.df.shape}.&#34;)
+        self.filter_subject_appearances(min_appearances, max_appearances)
+        print(f&#34;Size after filtering subjects appearances: {self.df.shape}.&#34;)
+        self.filter_subjects_count()
+        print(f&#34;Size after filtering subjects count: {self.df.shape}.&#34;)
+
+        print(&#34;Subjects value counts before filtering empty subjects: &#34;)
+        # print value counts of subjects
+        self.df.reset_index(drop=True, inplace=True)
+        # flatten the subjects list to get a list of all subjects in the dataframe
+        subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+        # count the number of times each subject appears
+        subject_counts = pd.Series(subjects).value_counts()
+        print(&#34;Head of subjects value counts: &#34;)
+        print(subject_counts.head(5))
+        print(&#34;Tail of subjects value counts: &#34;)
+        print(subject_counts.tail(5))
+    
+        self.filter_empty_subjects()
+        print(f&#34;Size after filtering empty subjects: {self.df.shape}.&#34;)
+
+        print(&#34;Subjects value counts after filtering empty subjects: &#34;)
+        # print value counts of subjects
+        self.df.reset_index(drop=True, inplace=True)
+        # flatten the subjects list to get a list of all subjects
+        subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+        # count the number of times each subject appears
+        subject_counts = pd.Series(subjects).value_counts()
+        print(&#34;Head of subjects value counts: &#34;)
+        print(subject_counts.head(5))
+        print(&#34;Tail of subjects value counts: &#34;)
+        print(subject_counts.tail(5))
+
+        print(&#34;Preprocessing complete. (debug mode)&#34;)
+
+        
+    def process(self, file_code: str, file_news: str, min_appearances: int = 100, max_appearances: int = np.inf, debug: bool = False) -&gt; None:
+        &#34;&#34;&#34;
+        Complete the processing of the news data including loading the news codes, and preprocessing the news data. 
+        The default values for subjects apppearances are set based on the distribution of 
+        the training data (for more information, see the notebook `data_exploration.ipynb`).  
+
+        Args:
+            file_code (str): The path to the news codes file.
+            file_news (str): The path to the news data file.
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+            debug (bool): If True, print the size of the data after each step.
+        &#34;&#34;&#34;
+        # load the news codes
+        self.load_news_codes(file_code)
+        # preprocess the news data
+        if debug:
+            self.preprocess_debug(file_news, min_appearances, max_appearances)
+        else:
+            self.preprocess(file_news, min_appearances, max_appearances)       
+
+
+    def get_news(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Return the news data.
+
+        Returns:
+            DataFrame: The news data.
+        &#34;&#34;&#34;
+        return self.df
+    
+    
+    def get_news_codes(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Return the news codes.
+
+        Returns:
+            DataFrame: The news codes.
+        &#34;&#34;&#34;
+        return self.df_codes
+    
+    
+    def create_random_pairs_headline(self, num_pairs: int) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Generates random pairs of news headlines from the DataFrame. It randomly selects two different headlines and 
+        ensures that they are not repeated as (a, b) and (b, a) pairs. The method returns a DataFrame of pairs.
+
+        Args:
+            num_pairs (int): The number of pairs to generate.
+
+        Returns:
+            DataFrame: A DataFrame of pairs of news headlines.
+        &#34;&#34;&#34;
+        # get all the headlines
+        headlines = self.df[&#39;headline&#39;].values
+
+        # make sure we don&#39;t try to take more pairs than possible
+        max_pairs = len(headlines) * (len(headlines) - 1) // 2 # we divide by 2 because we don&#39;t want to count (a, b) and (b, a) as different pairs
+        num_pairs = min(num_pairs, max_pairs) # if num_pairs &gt; max_pairs, we take max_pairs
+
+        # create a set of pairs to make sure we don&#39;t take the same pair twice
+        pairs_set = set()
+        while len(pairs_set) &lt; num_pairs:
+            # sorted and replace=False to make sure we don&#39;t take (a, b) and (b, a) as different pairs
+            pair = tuple(sorted(np.random.choice(headlines, size=2, replace=False))) 
+            pairs_set.add(pair)
+        
+        pair_df = pd.DataFrame(list(pairs_set), columns=[&#39;news1&#39;, &#39;news2&#39;])
+
+        return pair_df
+    
+
+    def select_top_subjects_per_news(self, n: int = 5) -&gt; None:
+        &#34;&#34;&#34;
+        Select the top `n` subjects per news based on their frequency in the dataset. It uses the `Counter` class to count the frequency 
+        of each subject and selects the top n subjects per news.
+
+        Args:
+            n (int): The number of subjects to keep per news.
+        &#34;&#34;&#34;
+        # flatten the subjects list for each news
+        all_subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+
+        # count the frequency of each subject in the dataset
+        subject_counts = Counter(all_subjects)
+
+        # function to get the frequency of a subject
+        def get_subject_frequency(subject):
+            return subject_counts[subject]
+
+        # select the top n subjects per news based on their frequency in the dataset
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: sorted(subjects, key=get_subject_frequency, reverse=True)[:n])
+
+
+    def encode_subjects(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Encode the &#39;subjects&#39; column using MultiLabelBinarizer. 
+        It creates binary columns for each subject, indicating whether a news has that subject or not.
+
+        Returns:
+            df_encoded (DataFrame): The dataframe with the encoded subjects, having binary columns for each subject indicating whether a news has that subject or not.
+        &#34;&#34;&#34;
+        # get all subjects from the dataframe and sort them to make sure the order is always the same 
+        all_subjects = sorted([s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist])
+        mlb = MultiLabelBinarizer()
+        # fit the MultiLabelBinarizer on all subjects
+        mlb.fit([all_subjects])
+        # encode the subjects of each news
+        self.df_encoded = mlb.transform(self.df[&#39;subjects&#39;].tolist())
+        return self.df_encoded
+    
+
+    def jaccard_similarity(self, subjects1: list, subjects2: list) -&gt; float:
+        &#34;&#34;&#34;
+        Calculate  calculates the Jaccard similarity between two sets of subjects. It uses the jaccard_score function 
+        from scikit-learn with the &#39;macro&#39; average. This function is used to calculate the Jaccard similarity between 
+        labels and predictions. In our case, we use the subjects from the first news as the labels and the subjects from
+        the second news as the predictions. The &#39;macro&#39; average calculates the Jaccard similarity for each subject separately
+        and then takes the unweighted mean of the Jaccard similarities. 
+
+        Example:
+            subjects1 = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], subjects2 = [&#39;a&#39;, &#39;b&#39;, &#39;d&#39;]
+            jaccard_score(subjects1, subjects2, average=&#39;macro&#39;) = (1 + 1 + 0) / 3 = 0.66
+
+            - the Jaccard similarity for &#39;a&#39; is 1 because &#39;a&#39; is in both subjects1 and subjects2
+            - the Jaccard similarity for &#39;b&#39; is 1 because &#39;b&#39; is in both subjects1 and subjects2
+            - the Jaccard similarity for &#39;c&#39; is 0 because &#39;c&#39; is in subjects1 but not in subjects2
+            - the Jaccard similarity for &#39;d&#39; is 0 because &#39;d&#39; is in subjects2 but not in subjects1
+            
+            The &#39;macro&#39; average is the unweighted mean of the Jaccard similarities for each subject in this case, the &#39;macro&#39; 
+            average is (1 + 1 + 0 + 0) / 4 = 0.5
+                
+            
+        Args:
+            subjects1 (list): A list of subjects from the first news.
+            subjects2 (list): A list of subjects from the second news.
+
+        Returns:
+            float: The Jaccard similarity between the two subject sets.
+
+        Reference:
+            https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html
+        &#34;&#34;&#34;
+        return jaccard_score(subjects1, subjects2, average=&#39;macro&#39;) 
+    
+
+    def cosine_similarity(self, subjects1: list, subjects2: list) -&gt; float:
+        &#34;&#34;&#34;
+        Calculate the cosine similarity between two sets of subjects. It uses the cosine_similarity function from 
+        scikit-learn to compute the similarity between two vectors.
+
+        Args:
+            subjects1 (list): A list of subjects from the first news.
+            subjects2 (list): A list of subjects from the second news.
+
+        Returns:
+            float: The cosine similarity between the two subject sets.
+
+        Reference:
+            https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html
+        &#34;&#34;&#34;
+        # cosine_similarity returns a 2D array (kernel matrix), so we take the first element of the first row to get the similarity value 
+        return cosine_similarity([subjects1], [subjects2])[0][0] 
+
+
+    def calculate_similarities(self, pairs: pd.DataFrame, use_jaccard: bool = True, use_cosine: bool = True) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Calculates the Jaccard and/or cosine similarity for each pair of news headlines. Adds new columns for 
+        the similarities to the pairs DataFrame.
+
+        Args:
+            pairs (DataFrame): A DataFrame containing pairs of news headlines.
+            use_jaccard (bool): Indicates whether to calculate Jaccard similarity.
+            use_cosine (bool): Indicates whether to calculate cosine similarity.
+
+        Returns:
+            DataFrame: A new DataFrame with new columns for the Jaccard and/or cosine similarity of each pair.
+        &#34;&#34;&#34;
+        if use_jaccard:
+            # calculates the Jaccard similarity for each pair of news headlines by applying the jaccard_similarity function to each row of the pairs DataFrame
+            pairs[&#39;similarity_jaccard&#39;] = pairs.apply(lambda row: self.jaccard_similarity(
+                # creates a boolean by comparing each &#39;headline&#39; in self.df with the &#39;news1&#39; value in the current row. Uses this boolean to filter self.df_encoded
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]].tolist()[0],  # converts the filtered DataFrame into a list and takes the first element (the list contains only one element)
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]].tolist()[0]),  # does the same for &#39;news2&#39;
+                                                    axis=1)
+        if use_cosine:
+            # calculates the cosine similarity for each pair of news headlines using the same approach as above (for Jaccard similarity)
+            pairs[&#39;similarity_cosine&#39;] = pairs.apply(lambda row: self.cosine_similarity(
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]].tolist()[0],
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]].tolist()[0]),
+                                                    axis=1)
+        return pairs
+
+
+    def filter_similar_headlines(self, pairs: pd.DataFrame, similarity_threshold: float) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Filter out pairs of news that have similar headlines based on a similarity threshold. It calculates the similarity between the 
+        headlines using the SequenceMatcher class from difflib and filters out pairs with similarity above the threshold.
+
+        The ratio value returned by the SequenceMatcher class is a measure of the sequences’ similarity as a float in the range [0, 1]. The
+        higher the ratio, the more similar the sequences are. The ratio is calculated as follows:
+            ratio = 2.0 * M / T
+            where M is the number of matches and T is the total number of elements in both sequences.
+
+        Reference:
+            https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher
+        
+        Args:
+            pairs (DataFrame): A DataFrame containing pairs of news headlines.
+            similarity_threshold (float): The similarity threshold for headline similarity (between 0.0 and 1.0).
+
+        Returns:
+            DataFrame: The filtered pairs DataFrame.
+        &#34;&#34;&#34;
+        filtered_pairs = pairs.copy()
+        # calculate the similarity between the headlines of each pair of news by applying the SequenceMatcher class to each row of the pairs dataframe
+        filtered_pairs[&#39;headline_similarity&#39;] = filtered_pairs.apply(
+            lambda row: SequenceMatcher(None, row[&#39;news1&#39;], row[&#39;news2&#39;]).ratio(), axis=1)
+        # filter out pairs with similarity above the threshold (that are too similar)
+        filtered_pairs = filtered_pairs[filtered_pairs[&#39;headline_similarity&#39;] &lt; similarity_threshold]
+        filtered_pairs.drop(columns=[&#39;headline_similarity&#39;], inplace=True)
+        return filtered_pairs
+    
+
+    def generate_pairs(self, num_pairs: int, filepath: str, use_jaccard: bool = True, use_cosine: bool = True,
+                       headline_similarity_threshold: float = 0.90) -&gt; None:
+        &#34;&#34;&#34;
+        Create random pairs of news headlines, calculates the similarities, filters out similar headlines, and saves the results to a CSV file. 
+        It provides flexibility to enable/disable Jaccard similarity, cosine similarity, and headline similarity filtering.
+
+        Args:
+            num_pairs (int): The number of pairs to create. The actual number of pairs created may be lower if there are not enough unique news headlines.
+            filepath (str): The filepath to save the results to.
+            use_jaccard (bool): Whether to calculate Jaccard similarity or not.
+            use_cosine (bool): Whether to calculate cosine similarity or not.
+            headline_similarity_threshold (float): The similarity threshold for headline similarity (between 0.0 and 1.0).
+        &#34;&#34;&#34;
+        print(f&#34;\n\nGenerating {num_pairs} pairs of news headlines...&#34;)
+
+        # encode the subjects of the news headlines
+        self.encode_subjects()
+        # create random pairs of news headlines
+        pairs = self.create_random_pairs_headline(num_pairs)
+        # calculate the similarities between the pairs of news headlines
+        pairs = self.calculate_similarities(pairs, use_jaccard, use_cosine)
+        # filter out pairs of news that have similar headlines
+        pairs = self.filter_similar_headlines(pairs, similarity_threshold=headline_similarity_threshold)
+
+        # add columns &#39;guid&#39; to the pairs dataframe
+        pairs[&#39;guid1&#39;] = pairs.apply(lambda row: self.df[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]][&#39;guid&#39;].values[0], axis=1)
+        pairs[&#39;guid2&#39;] = pairs.apply(lambda row: self.df[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]][&#39;guid&#39;].values[0], axis=1)
+
+        # reorder the columns for better readability (guids first, then news, then similarities)
+        if use_jaccard and use_cosine:
+            pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_jaccard&#39;, &#39;similarity_cosine&#39;]]
+        elif use_jaccard:
+            pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_jaccard&#39;]]
+        elif use_cosine:
+            pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_cosine&#39;]]
+
+        print(f&#34;\nNumber of pairs generated after filtering similar headlines: {len(pairs)}&#34;)
+
+        # rename the columns (for better readability)
+        pairs = pairs.rename(columns={&#39;guid1&#39;: &#39;guid_news1&#39;, &#39;guid2&#39;: &#39;guid_news2&#39;})
+
+        # save the pairs to a CSV file
+        # quoting=csv.QUOTE_NONNUMERIC is used to avoid issues with commas in the news headlines
+        pairs.to_csv(filepath, index=False, quoting=csv.QUOTE_NONNUMERIC)  
+        print(f&#34;\nSaved results to &#39;{filepath}&#39; file.&#34;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="NewsProcessor.NewsProcessor"><code class="flex name class">
+<span>class <span class="ident">NewsProcessor</span></span>
+<span>(</span><span>lang: list = ['en', 'EN'], columns: list = ['guid', 'data.versionCreated', 'data.headline', 'data.body', 'data.subjects'])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The NewsProcessor class is designed to process and analyze news data. It provides methods to ensure the
+correctness and formatting of news data for analysis purposes, including removing inappropriate news, handling
+the number of subjects, eliminating duplicates, and more. Additionally, it offers functionality to
+generate data pairs and calculate Jaccard and cosine similarities between news pairs.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>lang</code></strong> :&ensp;<code>list</code></dt>
+<dd>The list of languages to filter the news data.</dd>
+<dt><strong><code>columns</code></strong> :&ensp;<code>list</code></dt>
+<dd>The list of columns to keep in the news data.</dd>
+<dt><strong><code>news</code></strong> :&ensp;<code>list</code></dt>
+<dd>The list of news data.</dd>
+<dt><strong><code>df</code></strong> :&ensp;<code>DataFrame</code></dt>
+<dd>The DataFrame of news data.</dd>
+<dt><strong><code>df_codes</code></strong> :&ensp;<code>DataFrame</code></dt>
+<dd>The DataFrame of news codes.</dd>
+<dt><strong><code>valid_subjects</code></strong> :&ensp;<code>set</code></dt>
+<dd>The set of valid subjects.</dd>
+<dt><strong><code>df_encoded</code></strong> :&ensp;<code>DataFrame</code></dt>
+<dd>The DataFrame of news data with encoded subjects, having binary columns for each subject indicating whether a news has that subject or not. </dd>
+</dl>
+<p>Constructor method.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>lang</code></strong> :&ensp;<code>list</code></dt>
+<dd>The list of languages to filter the news data.</dd>
+<dt><strong><code>columns</code></strong> :&ensp;<code>list</code></dt>
+<dd>The list of columns to keep in the news dataframe.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class NewsProcessor:
+    &#34;&#34;&#34;
+    The NewsProcessor class is designed to process and analyze news data. It provides methods to ensure the 
+    correctness and formatting of news data for analysis purposes, including removing inappropriate news, handling 
+    the number of subjects, eliminating duplicates, and more. Additionally, it offers functionality to 
+    generate data pairs and calculate Jaccard and cosine similarities between news pairs.
+
+    Attributes:
+        lang (list): The list of languages to filter the news data.
+        columns (list): The list of columns to keep in the news data.
+        news (list): The list of news data.
+        df (DataFrame): The DataFrame of news data.
+        df_codes (DataFrame): The DataFrame of news codes.
+        valid_subjects (set): The set of valid subjects.
+        df_encoded (DataFrame): The DataFrame of news data with encoded subjects, having binary columns for each subject indicating whether a news has that subject or not. 
+    &#34;&#34;&#34;
+    
+    def __init__(self, lang: list = [&#39;en&#39;, &#39;EN&#39;], columns: list = [&#39;guid&#39;, &#39;data.versionCreated&#39;, &#39;data.headline&#39;, &#39;data.body&#39;, &#39;data.subjects&#39;]) -&gt; None:
+        &#34;&#34;&#34;
+        Constructor method.
+
+        Args:
+            lang (list): The list of languages to filter the news data.
+            columns (list): The list of columns to keep in the news dataframe.
+        &#34;&#34;&#34;
+        self.lang = lang
+        self.columns = columns
+        self.news = None
+        self.df = None
+        self.df_codes = None
+        self.valid_subjects = None
+        self.df_encoded = None
+
+
+    def load_news_codes(self, path: str) -&gt; None:
+        &#34;&#34;&#34;
+        Load the news codes file into a DataFrame and sets the index for quick access. 
+        The codes are used later for filtering valid subjects.
+
+        Args:
+            path (str): The path to the news codes file.
+        &#34;&#34;&#34;
+        self.df_codes = pd.read_csv(path, sep=&#39;;&#39;)
+        self.df_codes.set_index(&#39;Code&#39;, inplace=True)
+        self.valid_subjects = set(self.df_codes.index)
+        
+
+    def load_news(self, directory: str) -&gt; None:
+        &#34;&#34;&#34;
+        Load news data from JSON files in a given directory. It iterates over the files, reads 
+        each file using pd.read_json, and concatenates the resulting DataFrame to the main DataFrame (self.df).
+
+        Args:
+            directory (str): The directory containing the json files.
+        &#34;&#34;&#34;
+        # initialize the dataframe (empty)
+        self.df = pd.DataFrame()
+
+        # iterate over all json files in the directory
+        for filename in os.listdir(directory):
+            # check the correct file extension
+            if filename.endswith(&#34;.txt.gz&#34;):
+                filepath = os.path.join(directory, filename)
+                # read the json file
+                with gzip.open(filepath, &#39;r&#39;) as f:
+                    news = pd.read_json(f)
+
+                # append the data from the current file to main dataframe (self.df)
+                self.df = pd.concat([self.df, pd.json_normalize(news[&#39;Items&#39;])])
+
+        
+    def filter_lang(self, lang: list = [&#39;en&#39;, &#39;EN&#39;]) -&gt; None:
+        &#34;&#34;&#34;
+        Filter the news data based on the specified languages.
+        &#34;&#34;&#34;
+        self.df = self.df[self.df[&#39;data.language&#39;].isin(self.lang)]
+        
+
+    def keep_columns(self) -&gt; None:
+        &#34;&#34;&#34;
+        Select and rename specific columns from the DataFrame and drop the rest. 
+        Use the columns from the &#39;columns&#39; attribute.
+        &#34;&#34;&#34;
+        self.df = self.df[self.columns]
+        self.df.rename(columns={&#39;data.versionCreated&#39;: &#39;date&#39;, &#39;data.headline&#39;: &#39;headline&#39;, &#39;data.body&#39;: &#39;body&#39;, &#39;data.subjects&#39;: &#39;subjects&#39;}, inplace=True)
+        
+
+    def drop_duplicates(self) -&gt; None:
+        &#34;&#34;&#34;
+        Drop duplicate rows in the data based on the &#39;headline&#39; and &#39;guid&#39; columns.
+        &#34;&#34;&#34;
+        self.df.drop_duplicates(subset=[&#39;headline&#39;], inplace=True)
+        self.df.drop_duplicates(subset=[&#39;guid&#39;], inplace=True)
+
+        
+    def filter_valid_subjects(self) -&gt; None:
+        &#34;&#34;&#34;
+        Filter the &#39;subjects&#39; column for each news to include only valid subjects based on the news codes file. 
+        It checks each subject in the &#39;subjects&#39; list and keeps only those that exist in the set of valid subjects.
+        &#34;&#34;&#34;
+        # check that each subject is in the set of valid subjects
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: list(set([s for s in subjects if s in self.valid_subjects])))
+
+
+    def filter_unique_subjects_per_news(self) -&gt; None:
+        &#34;&#34;&#34;
+        Filter the &#39;subjects&#39; column for each news to include only unique subjects. Also, convert the &#39;subjects&#39; column to a list.
+        &#34;&#34;&#34;
+        # use set function to remove duplicates
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: list(set(subjects)))
+
+
+    def sort_subjects(self) -&gt; None:
+        &#34;&#34;&#34; 
+        Sort the &#39;subjects&#39; for each news alphabetically. This ensures that the same subjects are represented in the same order, making it 
+        easier to compare subjects across news.
+        &#34;&#34;&#34;
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: sorted(subjects))
+
+
+    def filter_subjects_count(self) -&gt; None:
+        &#34;&#34;&#34;
+        Count the number of subjects for each news and keep only the news with subjects count within the interquartile range (IQR).
+        &#34;&#34;&#34;
+        # create a momentary column with the number of subjects per news
+        self.df[&#39;subjects_length&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: len(subjects))
+
+        # calculate the interquartile range (IQR)
+        Q1 = self.df[&#39;subjects_length&#39;].quantile(0.25)
+        Q3 = self.df[&#39;subjects_length&#39;].quantile(0.75)
+
+        # calculate the IQR
+        IQR = Q3 - Q1
+
+        # filter out the news with subjects length outside the IQR
+        self.df = self.df[(self.df[&#39;subjects_length&#39;] &gt;= Q1 - 1.5 * IQR) &amp; (self.df[&#39;subjects_length&#39;] &lt;= Q3 + 1.5 * IQR)]
+
+        # drop the &#39;subjects_length&#39; column
+        self.df.drop(columns=[&#39;subjects_length&#39;], inplace=True)
+
+
+    def filter_subject_appearances(self, min_appearances: int, max_appearances: int) -&gt; None:
+        &#34;&#34;&#34;
+        Filter out the subjects that appear less than min_appearances or more than max_appearances.
+
+        Args:
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+
+        References:
+            https://docs.python.org/3/library/collections.html
+        &#34;&#34;&#34;
+        # flatten the subjects list to get a list of all subjects in the dataframe
+        subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+        # count the number of times each subject appears
+        subject_counts = Counter(subjects)
+
+        # find subjects that are to be filtered out (appear less than min_appearances or more than max_appearances)
+        subjects_to_filter = {s for s, count in subject_counts.items() 
+                            if count &lt; min_appearances or count &gt; max_appearances}
+        
+        # filter out the subjects
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: [s for s in subjects if s not in subjects_to_filter])
+
+            
+    def filter_empty_subjects(self) -&gt; None:
+        &#34;&#34;&#34;
+        Filter out the news with empty &#39;subjects&#39;.
+        &#34;&#34;&#34;
+        # keep only the news with subjects list length greater than 0
+        self.df = self.df[self.df[&#39;subjects&#39;].map(len) &gt; 0]
+
+
+    def preprocess(self, file: str, min_appearances: int, max_appearances: int) -&gt; None:
+        &#34;&#34;&#34;
+        Preprocess the news data by applying all the preprocessing steps.
+
+        In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load 
+        news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects, 
+        sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.
+
+        Args:
+            file (str): The path to the news data file.
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+        &#34;&#34;&#34;
+        print(&#34;Preprocessing news data...&#34;)
+
+        # load the news data
+        self.load_news(file)
+        print(f&#34;Size before filtering: {self.df.shape}.&#34;)
+
+        # apply the preprocessing steps
+        self.filter_lang()
+        self.keep_columns()
+        self.drop_duplicates()
+        self.filter_valid_subjects()
+        self.filter_unique_subjects_per_news()
+        self.sort_subjects()
+        self.filter_subject_appearances(min_appearances, max_appearances)
+        self.filter_subjects_count()
+        self.filter_empty_subjects()
+
+        # reset the index
+        self.df.reset_index(drop=True, inplace=True)
+
+        print(f&#34;Size after filtering: {self.df.shape}.&#34;)
+        print(&#34;Preprocessing complete.&#34;)
+
+
+    def preprocess_debug(self, file: str, min_appearances: int, max_appearances: int) -&gt; None:
+        &#34;&#34;&#34;
+        Method is similar to `preprocess`, but it prints the size of the DataFrame after 
+        each preprocessing step. It provides additional information for debugging and testing purposes.
+
+        In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load 
+        news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects, 
+        sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.
+
+        Args:
+            file (str): The path to the news data file.
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+        &#34;&#34;&#34;
+        # load the news data
+        print(&#34;Preprocessing news data... (debug mode)&#34;)
+        self.load_news(file)
+
+        # apply the preprocessing steps
+        print(f&#34;Size before filtering: {self.df.shape}.&#34;)
+        self.filter_lang()
+        print(f&#34;Size after filtering language: {self.df.shape}.&#34;)
+        self.keep_columns()
+        print(f&#34;Size after keeping columns: {self.df.shape}.&#34;)
+        self.drop_duplicates()
+        print(f&#34;Size after dropping duplicates: {self.df.shape}.&#34;)
+        self.filter_valid_subjects()
+        print(f&#34;Size after filtering valid subjects: {self.df.shape}.&#34;)
+        self.filter_unique_subjects_per_news()
+        print(f&#34;Size after filtering unique subjects per news: {self.df.shape}.&#34;)
+        self.sort_subjects()
+        print(f&#34;Size after sorting subjects: {self.df.shape}.&#34;)
+        self.filter_subject_appearances(min_appearances, max_appearances)
+        print(f&#34;Size after filtering subjects appearances: {self.df.shape}.&#34;)
+        self.filter_subjects_count()
+        print(f&#34;Size after filtering subjects count: {self.df.shape}.&#34;)
+
+        print(&#34;Subjects value counts before filtering empty subjects: &#34;)
+        # print value counts of subjects
+        self.df.reset_index(drop=True, inplace=True)
+        # flatten the subjects list to get a list of all subjects in the dataframe
+        subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+        # count the number of times each subject appears
+        subject_counts = pd.Series(subjects).value_counts()
+        print(&#34;Head of subjects value counts: &#34;)
+        print(subject_counts.head(5))
+        print(&#34;Tail of subjects value counts: &#34;)
+        print(subject_counts.tail(5))
+    
+        self.filter_empty_subjects()
+        print(f&#34;Size after filtering empty subjects: {self.df.shape}.&#34;)
+
+        print(&#34;Subjects value counts after filtering empty subjects: &#34;)
+        # print value counts of subjects
+        self.df.reset_index(drop=True, inplace=True)
+        # flatten the subjects list to get a list of all subjects
+        subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+        # count the number of times each subject appears
+        subject_counts = pd.Series(subjects).value_counts()
+        print(&#34;Head of subjects value counts: &#34;)
+        print(subject_counts.head(5))
+        print(&#34;Tail of subjects value counts: &#34;)
+        print(subject_counts.tail(5))
+
+        print(&#34;Preprocessing complete. (debug mode)&#34;)
+
+        
+    def process(self, file_code: str, file_news: str, min_appearances: int = 100, max_appearances: int = np.inf, debug: bool = False) -&gt; None:
+        &#34;&#34;&#34;
+        Complete the processing of the news data including loading the news codes, and preprocessing the news data. 
+        The default values for subjects apppearances are set based on the distribution of 
+        the training data (for more information, see the notebook `data_exploration.ipynb`).  
+
+        Args:
+            file_code (str): The path to the news codes file.
+            file_news (str): The path to the news data file.
+            min_appearances (int): The minimum number of times a subject must appear to be kept.
+            max_appearances (int): The maximum number of times a subject must appear to be kept.
+            debug (bool): If True, print the size of the data after each step.
+        &#34;&#34;&#34;
+        # load the news codes
+        self.load_news_codes(file_code)
+        # preprocess the news data
+        if debug:
+            self.preprocess_debug(file_news, min_appearances, max_appearances)
+        else:
+            self.preprocess(file_news, min_appearances, max_appearances)       
+
+
+    def get_news(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Return the news data.
+
+        Returns:
+            DataFrame: The news data.
+        &#34;&#34;&#34;
+        return self.df
+    
+    
+    def get_news_codes(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Return the news codes.
+
+        Returns:
+            DataFrame: The news codes.
+        &#34;&#34;&#34;
+        return self.df_codes
+    
+    
+    def create_random_pairs_headline(self, num_pairs: int) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Generates random pairs of news headlines from the DataFrame. It randomly selects two different headlines and 
+        ensures that they are not repeated as (a, b) and (b, a) pairs. The method returns a DataFrame of pairs.
+
+        Args:
+            num_pairs (int): The number of pairs to generate.
+
+        Returns:
+            DataFrame: A DataFrame of pairs of news headlines.
+        &#34;&#34;&#34;
+        # get all the headlines
+        headlines = self.df[&#39;headline&#39;].values
+
+        # make sure we don&#39;t try to take more pairs than possible
+        max_pairs = len(headlines) * (len(headlines) - 1) // 2 # we divide by 2 because we don&#39;t want to count (a, b) and (b, a) as different pairs
+        num_pairs = min(num_pairs, max_pairs) # if num_pairs &gt; max_pairs, we take max_pairs
+
+        # create a set of pairs to make sure we don&#39;t take the same pair twice
+        pairs_set = set()
+        while len(pairs_set) &lt; num_pairs:
+            # sorted and replace=False to make sure we don&#39;t take (a, b) and (b, a) as different pairs
+            pair = tuple(sorted(np.random.choice(headlines, size=2, replace=False))) 
+            pairs_set.add(pair)
+        
+        pair_df = pd.DataFrame(list(pairs_set), columns=[&#39;news1&#39;, &#39;news2&#39;])
+
+        return pair_df
+    
+
+    def select_top_subjects_per_news(self, n: int = 5) -&gt; None:
+        &#34;&#34;&#34;
+        Select the top `n` subjects per news based on their frequency in the dataset. It uses the `Counter` class to count the frequency 
+        of each subject and selects the top n subjects per news.
+
+        Args:
+            n (int): The number of subjects to keep per news.
+        &#34;&#34;&#34;
+        # flatten the subjects list for each news
+        all_subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+
+        # count the frequency of each subject in the dataset
+        subject_counts = Counter(all_subjects)
+
+        # function to get the frequency of a subject
+        def get_subject_frequency(subject):
+            return subject_counts[subject]
+
+        # select the top n subjects per news based on their frequency in the dataset
+        self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: sorted(subjects, key=get_subject_frequency, reverse=True)[:n])
+
+
+    def encode_subjects(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Encode the &#39;subjects&#39; column using MultiLabelBinarizer. 
+        It creates binary columns for each subject, indicating whether a news has that subject or not.
+
+        Returns:
+            df_encoded (DataFrame): The dataframe with the encoded subjects, having binary columns for each subject indicating whether a news has that subject or not.
+        &#34;&#34;&#34;
+        # get all subjects from the dataframe and sort them to make sure the order is always the same 
+        all_subjects = sorted([s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist])
+        mlb = MultiLabelBinarizer()
+        # fit the MultiLabelBinarizer on all subjects
+        mlb.fit([all_subjects])
+        # encode the subjects of each news
+        self.df_encoded = mlb.transform(self.df[&#39;subjects&#39;].tolist())
+        return self.df_encoded
+    
+
+    def jaccard_similarity(self, subjects1: list, subjects2: list) -&gt; float:
+        &#34;&#34;&#34;
+        Calculate  calculates the Jaccard similarity between two sets of subjects. It uses the jaccard_score function 
+        from scikit-learn with the &#39;macro&#39; average. This function is used to calculate the Jaccard similarity between 
+        labels and predictions. In our case, we use the subjects from the first news as the labels and the subjects from
+        the second news as the predictions. The &#39;macro&#39; average calculates the Jaccard similarity for each subject separately
+        and then takes the unweighted mean of the Jaccard similarities. 
+
+        Example:
+            subjects1 = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], subjects2 = [&#39;a&#39;, &#39;b&#39;, &#39;d&#39;]
+            jaccard_score(subjects1, subjects2, average=&#39;macro&#39;) = (1 + 1 + 0) / 3 = 0.66
+
+            - the Jaccard similarity for &#39;a&#39; is 1 because &#39;a&#39; is in both subjects1 and subjects2
+            - the Jaccard similarity for &#39;b&#39; is 1 because &#39;b&#39; is in both subjects1 and subjects2
+            - the Jaccard similarity for &#39;c&#39; is 0 because &#39;c&#39; is in subjects1 but not in subjects2
+            - the Jaccard similarity for &#39;d&#39; is 0 because &#39;d&#39; is in subjects2 but not in subjects1
+            
+            The &#39;macro&#39; average is the unweighted mean of the Jaccard similarities for each subject in this case, the &#39;macro&#39; 
+            average is (1 + 1 + 0 + 0) / 4 = 0.5
+                
+            
+        Args:
+            subjects1 (list): A list of subjects from the first news.
+            subjects2 (list): A list of subjects from the second news.
+
+        Returns:
+            float: The Jaccard similarity between the two subject sets.
+
+        Reference:
+            https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html
+        &#34;&#34;&#34;
+        return jaccard_score(subjects1, subjects2, average=&#39;macro&#39;) 
+    
+
+    def cosine_similarity(self, subjects1: list, subjects2: list) -&gt; float:
+        &#34;&#34;&#34;
+        Calculate the cosine similarity between two sets of subjects. It uses the cosine_similarity function from 
+        scikit-learn to compute the similarity between two vectors.
+
+        Args:
+            subjects1 (list): A list of subjects from the first news.
+            subjects2 (list): A list of subjects from the second news.
+
+        Returns:
+            float: The cosine similarity between the two subject sets.
+
+        Reference:
+            https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html
+        &#34;&#34;&#34;
+        # cosine_similarity returns a 2D array (kernel matrix), so we take the first element of the first row to get the similarity value 
+        return cosine_similarity([subjects1], [subjects2])[0][0] 
+
+
+    def calculate_similarities(self, pairs: pd.DataFrame, use_jaccard: bool = True, use_cosine: bool = True) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Calculates the Jaccard and/or cosine similarity for each pair of news headlines. Adds new columns for 
+        the similarities to the pairs DataFrame.
+
+        Args:
+            pairs (DataFrame): A DataFrame containing pairs of news headlines.
+            use_jaccard (bool): Indicates whether to calculate Jaccard similarity.
+            use_cosine (bool): Indicates whether to calculate cosine similarity.
+
+        Returns:
+            DataFrame: A new DataFrame with new columns for the Jaccard and/or cosine similarity of each pair.
+        &#34;&#34;&#34;
+        if use_jaccard:
+            # calculates the Jaccard similarity for each pair of news headlines by applying the jaccard_similarity function to each row of the pairs DataFrame
+            pairs[&#39;similarity_jaccard&#39;] = pairs.apply(lambda row: self.jaccard_similarity(
+                # creates a boolean by comparing each &#39;headline&#39; in self.df with the &#39;news1&#39; value in the current row. Uses this boolean to filter self.df_encoded
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]].tolist()[0],  # converts the filtered DataFrame into a list and takes the first element (the list contains only one element)
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]].tolist()[0]),  # does the same for &#39;news2&#39;
+                                                    axis=1)
+        if use_cosine:
+            # calculates the cosine similarity for each pair of news headlines using the same approach as above (for Jaccard similarity)
+            pairs[&#39;similarity_cosine&#39;] = pairs.apply(lambda row: self.cosine_similarity(
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]].tolist()[0],
+                self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]].tolist()[0]),
+                                                    axis=1)
+        return pairs
+
+
+    def filter_similar_headlines(self, pairs: pd.DataFrame, similarity_threshold: float) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;
+        Filter out pairs of news that have similar headlines based on a similarity threshold. It calculates the similarity between the 
+        headlines using the SequenceMatcher class from difflib and filters out pairs with similarity above the threshold.
+
+        The ratio value returned by the SequenceMatcher class is a measure of the sequences’ similarity as a float in the range [0, 1]. The
+        higher the ratio, the more similar the sequences are. The ratio is calculated as follows:
+            ratio = 2.0 * M / T
+            where M is the number of matches and T is the total number of elements in both sequences.
+
+        Reference:
+            https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher
+        
+        Args:
+            pairs (DataFrame): A DataFrame containing pairs of news headlines.
+            similarity_threshold (float): The similarity threshold for headline similarity (between 0.0 and 1.0).
+
+        Returns:
+            DataFrame: The filtered pairs DataFrame.
+        &#34;&#34;&#34;
+        filtered_pairs = pairs.copy()
+        # calculate the similarity between the headlines of each pair of news by applying the SequenceMatcher class to each row of the pairs dataframe
+        filtered_pairs[&#39;headline_similarity&#39;] = filtered_pairs.apply(
+            lambda row: SequenceMatcher(None, row[&#39;news1&#39;], row[&#39;news2&#39;]).ratio(), axis=1)
+        # filter out pairs with similarity above the threshold (that are too similar)
+        filtered_pairs = filtered_pairs[filtered_pairs[&#39;headline_similarity&#39;] &lt; similarity_threshold]
+        filtered_pairs.drop(columns=[&#39;headline_similarity&#39;], inplace=True)
+        return filtered_pairs
+    
+
+    def generate_pairs(self, num_pairs: int, filepath: str, use_jaccard: bool = True, use_cosine: bool = True,
+                       headline_similarity_threshold: float = 0.90) -&gt; None:
+        &#34;&#34;&#34;
+        Create random pairs of news headlines, calculates the similarities, filters out similar headlines, and saves the results to a CSV file. 
+        It provides flexibility to enable/disable Jaccard similarity, cosine similarity, and headline similarity filtering.
+
+        Args:
+            num_pairs (int): The number of pairs to create. The actual number of pairs created may be lower if there are not enough unique news headlines.
+            filepath (str): The filepath to save the results to.
+            use_jaccard (bool): Whether to calculate Jaccard similarity or not.
+            use_cosine (bool): Whether to calculate cosine similarity or not.
+            headline_similarity_threshold (float): The similarity threshold for headline similarity (between 0.0 and 1.0).
+        &#34;&#34;&#34;
+        print(f&#34;\n\nGenerating {num_pairs} pairs of news headlines...&#34;)
+
+        # encode the subjects of the news headlines
+        self.encode_subjects()
+        # create random pairs of news headlines
+        pairs = self.create_random_pairs_headline(num_pairs)
+        # calculate the similarities between the pairs of news headlines
+        pairs = self.calculate_similarities(pairs, use_jaccard, use_cosine)
+        # filter out pairs of news that have similar headlines
+        pairs = self.filter_similar_headlines(pairs, similarity_threshold=headline_similarity_threshold)
+
+        # add columns &#39;guid&#39; to the pairs dataframe
+        pairs[&#39;guid1&#39;] = pairs.apply(lambda row: self.df[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]][&#39;guid&#39;].values[0], axis=1)
+        pairs[&#39;guid2&#39;] = pairs.apply(lambda row: self.df[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]][&#39;guid&#39;].values[0], axis=1)
+
+        # reorder the columns for better readability (guids first, then news, then similarities)
+        if use_jaccard and use_cosine:
+            pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_jaccard&#39;, &#39;similarity_cosine&#39;]]
+        elif use_jaccard:
+            pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_jaccard&#39;]]
+        elif use_cosine:
+            pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_cosine&#39;]]
+
+        print(f&#34;\nNumber of pairs generated after filtering similar headlines: {len(pairs)}&#34;)
+
+        # rename the columns (for better readability)
+        pairs = pairs.rename(columns={&#39;guid1&#39;: &#39;guid_news1&#39;, &#39;guid2&#39;: &#39;guid_news2&#39;})
+
+        # save the pairs to a CSV file
+        # quoting=csv.QUOTE_NONNUMERIC is used to avoid issues with commas in the news headlines
+        pairs.to_csv(filepath, index=False, quoting=csv.QUOTE_NONNUMERIC)  
+        print(f&#34;\nSaved results to &#39;{filepath}&#39; file.&#34;)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="NewsProcessor.NewsProcessor.calculate_similarities"><code class="name flex">
+<span>def <span class="ident">calculate_similarities</span></span>(<span>self, pairs: pandas.core.frame.DataFrame, use_jaccard: bool = True, use_cosine: bool = True) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculates the Jaccard and/or cosine similarity for each pair of news headlines. Adds new columns for
+the similarities to the pairs DataFrame.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>pairs</code></strong> :&ensp;<code>DataFrame</code></dt>
+<dd>A DataFrame containing pairs of news headlines.</dd>
+<dt><strong><code>use_jaccard</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Indicates whether to calculate Jaccard similarity.</dd>
+<dt><strong><code>use_cosine</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Indicates whether to calculate cosine similarity.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>DataFrame</code></dt>
+<dd>A new DataFrame with new columns for the Jaccard and/or cosine similarity of each pair.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def calculate_similarities(self, pairs: pd.DataFrame, use_jaccard: bool = True, use_cosine: bool = True) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Calculates the Jaccard and/or cosine similarity for each pair of news headlines. Adds new columns for 
+    the similarities to the pairs DataFrame.
+
+    Args:
+        pairs (DataFrame): A DataFrame containing pairs of news headlines.
+        use_jaccard (bool): Indicates whether to calculate Jaccard similarity.
+        use_cosine (bool): Indicates whether to calculate cosine similarity.
+
+    Returns:
+        DataFrame: A new DataFrame with new columns for the Jaccard and/or cosine similarity of each pair.
+    &#34;&#34;&#34;
+    if use_jaccard:
+        # calculates the Jaccard similarity for each pair of news headlines by applying the jaccard_similarity function to each row of the pairs DataFrame
+        pairs[&#39;similarity_jaccard&#39;] = pairs.apply(lambda row: self.jaccard_similarity(
+            # creates a boolean by comparing each &#39;headline&#39; in self.df with the &#39;news1&#39; value in the current row. Uses this boolean to filter self.df_encoded
+            self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]].tolist()[0],  # converts the filtered DataFrame into a list and takes the first element (the list contains only one element)
+            self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]].tolist()[0]),  # does the same for &#39;news2&#39;
+                                                axis=1)
+    if use_cosine:
+        # calculates the cosine similarity for each pair of news headlines using the same approach as above (for Jaccard similarity)
+        pairs[&#39;similarity_cosine&#39;] = pairs.apply(lambda row: self.cosine_similarity(
+            self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]].tolist()[0],
+            self.df_encoded[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]].tolist()[0]),
+                                                axis=1)
+    return pairs</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.cosine_similarity"><code class="name flex">
+<span>def <span class="ident">cosine_similarity</span></span>(<span>self, subjects1: list, subjects2: list) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculate the cosine similarity between two sets of subjects. It uses the cosine_similarity function from
+scikit-learn to compute the similarity between two vectors.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>subjects1</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list of subjects from the first news.</dd>
+<dt><strong><code>subjects2</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list of subjects from the second news.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>The cosine similarity between the two subject sets.</dd>
+</dl>
+<h2 id="reference">Reference</h2>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cosine_similarity(self, subjects1: list, subjects2: list) -&gt; float:
+    &#34;&#34;&#34;
+    Calculate the cosine similarity between two sets of subjects. It uses the cosine_similarity function from 
+    scikit-learn to compute the similarity between two vectors.
+
+    Args:
+        subjects1 (list): A list of subjects from the first news.
+        subjects2 (list): A list of subjects from the second news.
+
+    Returns:
+        float: The cosine similarity between the two subject sets.
+
+    Reference:
+        https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html
+    &#34;&#34;&#34;
+    # cosine_similarity returns a 2D array (kernel matrix), so we take the first element of the first row to get the similarity value 
+    return cosine_similarity([subjects1], [subjects2])[0][0] </code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.create_random_pairs_headline"><code class="name flex">
+<span>def <span class="ident">create_random_pairs_headline</span></span>(<span>self, num_pairs: int) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generates random pairs of news headlines from the DataFrame. It randomly selects two different headlines and
+ensures that they are not repeated as (a, b) and (b, a) pairs. The method returns a DataFrame of pairs.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>num_pairs</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of pairs to generate.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>DataFrame</code></dt>
+<dd>A DataFrame of pairs of news headlines.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_random_pairs_headline(self, num_pairs: int) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Generates random pairs of news headlines from the DataFrame. It randomly selects two different headlines and 
+    ensures that they are not repeated as (a, b) and (b, a) pairs. The method returns a DataFrame of pairs.
+
+    Args:
+        num_pairs (int): The number of pairs to generate.
+
+    Returns:
+        DataFrame: A DataFrame of pairs of news headlines.
+    &#34;&#34;&#34;
+    # get all the headlines
+    headlines = self.df[&#39;headline&#39;].values
+
+    # make sure we don&#39;t try to take more pairs than possible
+    max_pairs = len(headlines) * (len(headlines) - 1) // 2 # we divide by 2 because we don&#39;t want to count (a, b) and (b, a) as different pairs
+    num_pairs = min(num_pairs, max_pairs) # if num_pairs &gt; max_pairs, we take max_pairs
+
+    # create a set of pairs to make sure we don&#39;t take the same pair twice
+    pairs_set = set()
+    while len(pairs_set) &lt; num_pairs:
+        # sorted and replace=False to make sure we don&#39;t take (a, b) and (b, a) as different pairs
+        pair = tuple(sorted(np.random.choice(headlines, size=2, replace=False))) 
+        pairs_set.add(pair)
+    
+    pair_df = pd.DataFrame(list(pairs_set), columns=[&#39;news1&#39;, &#39;news2&#39;])
+
+    return pair_df</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.drop_duplicates"><code class="name flex">
+<span>def <span class="ident">drop_duplicates</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Drop duplicate rows in the data based on the 'headline' and 'guid' columns.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def drop_duplicates(self) -&gt; None:
+    &#34;&#34;&#34;
+    Drop duplicate rows in the data based on the &#39;headline&#39; and &#39;guid&#39; columns.
+    &#34;&#34;&#34;
+    self.df.drop_duplicates(subset=[&#39;headline&#39;], inplace=True)
+    self.df.drop_duplicates(subset=[&#39;guid&#39;], inplace=True)</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.encode_subjects"><code class="name flex">
+<span>def <span class="ident">encode_subjects</span></span>(<span>self) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Encode the 'subjects' column using MultiLabelBinarizer.
+It creates binary columns for each subject, indicating whether a news has that subject or not.</p>
+<h2 id="returns">Returns</h2>
+<p>df_encoded (DataFrame): The dataframe with the encoded subjects, having binary columns for each subject indicating whether a news has that subject or not.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def encode_subjects(self) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Encode the &#39;subjects&#39; column using MultiLabelBinarizer. 
+    It creates binary columns for each subject, indicating whether a news has that subject or not.
+
+    Returns:
+        df_encoded (DataFrame): The dataframe with the encoded subjects, having binary columns for each subject indicating whether a news has that subject or not.
+    &#34;&#34;&#34;
+    # get all subjects from the dataframe and sort them to make sure the order is always the same 
+    all_subjects = sorted([s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist])
+    mlb = MultiLabelBinarizer()
+    # fit the MultiLabelBinarizer on all subjects
+    mlb.fit([all_subjects])
+    # encode the subjects of each news
+    self.df_encoded = mlb.transform(self.df[&#39;subjects&#39;].tolist())
+    return self.df_encoded</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.filter_empty_subjects"><code class="name flex">
+<span>def <span class="ident">filter_empty_subjects</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Filter out the news with empty 'subjects'.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_empty_subjects(self) -&gt; None:
+    &#34;&#34;&#34;
+    Filter out the news with empty &#39;subjects&#39;.
+    &#34;&#34;&#34;
+    # keep only the news with subjects list length greater than 0
+    self.df = self.df[self.df[&#39;subjects&#39;].map(len) &gt; 0]</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.filter_lang"><code class="name flex">
+<span>def <span class="ident">filter_lang</span></span>(<span>self, lang: list = ['en', 'EN']) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Filter the news data based on the specified languages.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_lang(self, lang: list = [&#39;en&#39;, &#39;EN&#39;]) -&gt; None:
+    &#34;&#34;&#34;
+    Filter the news data based on the specified languages.
+    &#34;&#34;&#34;
+    self.df = self.df[self.df[&#39;data.language&#39;].isin(self.lang)]</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.filter_similar_headlines"><code class="name flex">
+<span>def <span class="ident">filter_similar_headlines</span></span>(<span>self, pairs: pandas.core.frame.DataFrame, similarity_threshold: float) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Filter out pairs of news that have similar headlines based on a similarity threshold. It calculates the similarity between the
+headlines using the SequenceMatcher class from difflib and filters out pairs with similarity above the threshold.</p>
+<p>The ratio value returned by the SequenceMatcher class is a measure of the sequences’ similarity as a float in the range [0, 1]. The
+higher the ratio, the more similar the sequences are. The ratio is calculated as follows:
+ratio = 2.0 * M / T
+where M is the number of matches and T is the total number of elements in both sequences.</p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher">https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher</a></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>pairs</code></strong> :&ensp;<code>DataFrame</code></dt>
+<dd>A DataFrame containing pairs of news headlines.</dd>
+<dt><strong><code>similarity_threshold</code></strong> :&ensp;<code>float</code></dt>
+<dd>The similarity threshold for headline similarity (between 0.0 and 1.0).</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>DataFrame</code></dt>
+<dd>The filtered pairs DataFrame.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_similar_headlines(self, pairs: pd.DataFrame, similarity_threshold: float) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Filter out pairs of news that have similar headlines based on a similarity threshold. It calculates the similarity between the 
+    headlines using the SequenceMatcher class from difflib and filters out pairs with similarity above the threshold.
+
+    The ratio value returned by the SequenceMatcher class is a measure of the sequences’ similarity as a float in the range [0, 1]. The
+    higher the ratio, the more similar the sequences are. The ratio is calculated as follows:
+        ratio = 2.0 * M / T
+        where M is the number of matches and T is the total number of elements in both sequences.
+
+    Reference:
+        https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher
+    
+    Args:
+        pairs (DataFrame): A DataFrame containing pairs of news headlines.
+        similarity_threshold (float): The similarity threshold for headline similarity (between 0.0 and 1.0).
+
+    Returns:
+        DataFrame: The filtered pairs DataFrame.
+    &#34;&#34;&#34;
+    filtered_pairs = pairs.copy()
+    # calculate the similarity between the headlines of each pair of news by applying the SequenceMatcher class to each row of the pairs dataframe
+    filtered_pairs[&#39;headline_similarity&#39;] = filtered_pairs.apply(
+        lambda row: SequenceMatcher(None, row[&#39;news1&#39;], row[&#39;news2&#39;]).ratio(), axis=1)
+    # filter out pairs with similarity above the threshold (that are too similar)
+    filtered_pairs = filtered_pairs[filtered_pairs[&#39;headline_similarity&#39;] &lt; similarity_threshold]
+    filtered_pairs.drop(columns=[&#39;headline_similarity&#39;], inplace=True)
+    return filtered_pairs</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.filter_subject_appearances"><code class="name flex">
+<span>def <span class="ident">filter_subject_appearances</span></span>(<span>self, min_appearances: int, max_appearances: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Filter out the subjects that appear less than min_appearances or more than max_appearances.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>min_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimum number of times a subject must appear to be kept.</dd>
+<dt><strong><code>max_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximum number of times a subject must appear to be kept.</dd>
+</dl>
+<h2 id="references">References</h2>
+<p><a href="https://docs.python.org/3/library/collections.html">https://docs.python.org/3/library/collections.html</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_subject_appearances(self, min_appearances: int, max_appearances: int) -&gt; None:
+    &#34;&#34;&#34;
+    Filter out the subjects that appear less than min_appearances or more than max_appearances.
+
+    Args:
+        min_appearances (int): The minimum number of times a subject must appear to be kept.
+        max_appearances (int): The maximum number of times a subject must appear to be kept.
+
+    References:
+        https://docs.python.org/3/library/collections.html
+    &#34;&#34;&#34;
+    # flatten the subjects list to get a list of all subjects in the dataframe
+    subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+    # count the number of times each subject appears
+    subject_counts = Counter(subjects)
+
+    # find subjects that are to be filtered out (appear less than min_appearances or more than max_appearances)
+    subjects_to_filter = {s for s, count in subject_counts.items() 
+                        if count &lt; min_appearances or count &gt; max_appearances}
+    
+    # filter out the subjects
+    self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: [s for s in subjects if s not in subjects_to_filter])</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.filter_subjects_count"><code class="name flex">
+<span>def <span class="ident">filter_subjects_count</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Count the number of subjects for each news and keep only the news with subjects count within the interquartile range (IQR).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_subjects_count(self) -&gt; None:
+    &#34;&#34;&#34;
+    Count the number of subjects for each news and keep only the news with subjects count within the interquartile range (IQR).
+    &#34;&#34;&#34;
+    # create a momentary column with the number of subjects per news
+    self.df[&#39;subjects_length&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: len(subjects))
+
+    # calculate the interquartile range (IQR)
+    Q1 = self.df[&#39;subjects_length&#39;].quantile(0.25)
+    Q3 = self.df[&#39;subjects_length&#39;].quantile(0.75)
+
+    # calculate the IQR
+    IQR = Q3 - Q1
+
+    # filter out the news with subjects length outside the IQR
+    self.df = self.df[(self.df[&#39;subjects_length&#39;] &gt;= Q1 - 1.5 * IQR) &amp; (self.df[&#39;subjects_length&#39;] &lt;= Q3 + 1.5 * IQR)]
+
+    # drop the &#39;subjects_length&#39; column
+    self.df.drop(columns=[&#39;subjects_length&#39;], inplace=True)</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.filter_unique_subjects_per_news"><code class="name flex">
+<span>def <span class="ident">filter_unique_subjects_per_news</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Filter the 'subjects' column for each news to include only unique subjects. Also, convert the 'subjects' column to a list.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_unique_subjects_per_news(self) -&gt; None:
+    &#34;&#34;&#34;
+    Filter the &#39;subjects&#39; column for each news to include only unique subjects. Also, convert the &#39;subjects&#39; column to a list.
+    &#34;&#34;&#34;
+    # use set function to remove duplicates
+    self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: list(set(subjects)))</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.filter_valid_subjects"><code class="name flex">
+<span>def <span class="ident">filter_valid_subjects</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Filter the 'subjects' column for each news to include only valid subjects based on the news codes file.
+It checks each subject in the 'subjects' list and keeps only those that exist in the set of valid subjects.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_valid_subjects(self) -&gt; None:
+    &#34;&#34;&#34;
+    Filter the &#39;subjects&#39; column for each news to include only valid subjects based on the news codes file. 
+    It checks each subject in the &#39;subjects&#39; list and keeps only those that exist in the set of valid subjects.
+    &#34;&#34;&#34;
+    # check that each subject is in the set of valid subjects
+    self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: list(set([s for s in subjects if s in self.valid_subjects])))</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.generate_pairs"><code class="name flex">
+<span>def <span class="ident">generate_pairs</span></span>(<span>self, num_pairs: int, filepath: str, use_jaccard: bool = True, use_cosine: bool = True, headline_similarity_threshold: float = 0.9) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create random pairs of news headlines, calculates the similarities, filters out similar headlines, and saves the results to a CSV file.
+It provides flexibility to enable/disable Jaccard similarity, cosine similarity, and headline similarity filtering.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>num_pairs</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of pairs to create. The actual number of pairs created may be lower if there are not enough unique news headlines.</dd>
+<dt><strong><code>filepath</code></strong> :&ensp;<code>str</code></dt>
+<dd>The filepath to save the results to.</dd>
+<dt><strong><code>use_jaccard</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether to calculate Jaccard similarity or not.</dd>
+<dt><strong><code>use_cosine</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Whether to calculate cosine similarity or not.</dd>
+<dt><strong><code>headline_similarity_threshold</code></strong> :&ensp;<code>float</code></dt>
+<dd>The similarity threshold for headline similarity (between 0.0 and 1.0).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_pairs(self, num_pairs: int, filepath: str, use_jaccard: bool = True, use_cosine: bool = True,
+                   headline_similarity_threshold: float = 0.90) -&gt; None:
+    &#34;&#34;&#34;
+    Create random pairs of news headlines, calculates the similarities, filters out similar headlines, and saves the results to a CSV file. 
+    It provides flexibility to enable/disable Jaccard similarity, cosine similarity, and headline similarity filtering.
+
+    Args:
+        num_pairs (int): The number of pairs to create. The actual number of pairs created may be lower if there are not enough unique news headlines.
+        filepath (str): The filepath to save the results to.
+        use_jaccard (bool): Whether to calculate Jaccard similarity or not.
+        use_cosine (bool): Whether to calculate cosine similarity or not.
+        headline_similarity_threshold (float): The similarity threshold for headline similarity (between 0.0 and 1.0).
+    &#34;&#34;&#34;
+    print(f&#34;\n\nGenerating {num_pairs} pairs of news headlines...&#34;)
+
+    # encode the subjects of the news headlines
+    self.encode_subjects()
+    # create random pairs of news headlines
+    pairs = self.create_random_pairs_headline(num_pairs)
+    # calculate the similarities between the pairs of news headlines
+    pairs = self.calculate_similarities(pairs, use_jaccard, use_cosine)
+    # filter out pairs of news that have similar headlines
+    pairs = self.filter_similar_headlines(pairs, similarity_threshold=headline_similarity_threshold)
+
+    # add columns &#39;guid&#39; to the pairs dataframe
+    pairs[&#39;guid1&#39;] = pairs.apply(lambda row: self.df[self.df[&#39;headline&#39;] == row[&#39;news1&#39;]][&#39;guid&#39;].values[0], axis=1)
+    pairs[&#39;guid2&#39;] = pairs.apply(lambda row: self.df[self.df[&#39;headline&#39;] == row[&#39;news2&#39;]][&#39;guid&#39;].values[0], axis=1)
+
+    # reorder the columns for better readability (guids first, then news, then similarities)
+    if use_jaccard and use_cosine:
+        pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_jaccard&#39;, &#39;similarity_cosine&#39;]]
+    elif use_jaccard:
+        pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_jaccard&#39;]]
+    elif use_cosine:
+        pairs = pairs[[&#39;guid1&#39;, &#39;news1&#39;, &#39;guid2&#39;, &#39;news2&#39;, &#39;similarity_cosine&#39;]]
+
+    print(f&#34;\nNumber of pairs generated after filtering similar headlines: {len(pairs)}&#34;)
+
+    # rename the columns (for better readability)
+    pairs = pairs.rename(columns={&#39;guid1&#39;: &#39;guid_news1&#39;, &#39;guid2&#39;: &#39;guid_news2&#39;})
+
+    # save the pairs to a CSV file
+    # quoting=csv.QUOTE_NONNUMERIC is used to avoid issues with commas in the news headlines
+    pairs.to_csv(filepath, index=False, quoting=csv.QUOTE_NONNUMERIC)  
+    print(f&#34;\nSaved results to &#39;{filepath}&#39; file.&#34;)</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.get_news"><code class="name flex">
+<span>def <span class="ident">get_news</span></span>(<span>self) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return the news data.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>DataFrame</code></dt>
+<dd>The news data.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_news(self) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Return the news data.
+
+    Returns:
+        DataFrame: The news data.
+    &#34;&#34;&#34;
+    return self.df</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.get_news_codes"><code class="name flex">
+<span>def <span class="ident">get_news_codes</span></span>(<span>self) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return the news codes.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>DataFrame</code></dt>
+<dd>The news codes.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_news_codes(self) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;
+    Return the news codes.
+
+    Returns:
+        DataFrame: The news codes.
+    &#34;&#34;&#34;
+    return self.df_codes</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.jaccard_similarity"><code class="name flex">
+<span>def <span class="ident">jaccard_similarity</span></span>(<span>self, subjects1: list, subjects2: list) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculate
+calculates the Jaccard similarity between two sets of subjects. It uses the jaccard_score function
+from scikit-learn with the 'macro' average. This function is used to calculate the Jaccard similarity between
+labels and predictions. In our case, we use the subjects from the first news as the labels and the subjects from
+the second news as the predictions. The 'macro' average calculates the Jaccard similarity for each subject separately
+and then takes the unweighted mean of the Jaccard similarities. </p>
+<h2 id="example">Example</h2>
+<p>subjects1 = ['a', 'b', 'c'], subjects2 = ['a', 'b', 'd']
+jaccard_score(subjects1, subjects2, average='macro') = (1 + 1 + 0) / 3 = 0.66</p>
+<ul>
+<li>the Jaccard similarity for 'a' is 1 because 'a' is in both subjects1 and subjects2</li>
+<li>the Jaccard similarity for 'b' is 1 because 'b' is in both subjects1 and subjects2</li>
+<li>the Jaccard similarity for 'c' is 0 because 'c' is in subjects1 but not in subjects2</li>
+<li>the Jaccard similarity for 'd' is 0 because 'd' is in subjects2 but not in subjects1</li>
+</ul>
+<p>The 'macro' average is the unweighted mean of the Jaccard similarities for each subject in this case, the 'macro'
+average is (1 + 1 + 0 + 0) / 4 = 0.5</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>subjects1</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list of subjects from the first news.</dd>
+<dt><strong><code>subjects2</code></strong> :&ensp;<code>list</code></dt>
+<dd>A list of subjects from the second news.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>The Jaccard similarity between the two subject sets.</dd>
+</dl>
+<h2 id="reference">Reference</h2>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def jaccard_similarity(self, subjects1: list, subjects2: list) -&gt; float:
+    &#34;&#34;&#34;
+    Calculate  calculates the Jaccard similarity between two sets of subjects. It uses the jaccard_score function 
+    from scikit-learn with the &#39;macro&#39; average. This function is used to calculate the Jaccard similarity between 
+    labels and predictions. In our case, we use the subjects from the first news as the labels and the subjects from
+    the second news as the predictions. The &#39;macro&#39; average calculates the Jaccard similarity for each subject separately
+    and then takes the unweighted mean of the Jaccard similarities. 
+
+    Example:
+        subjects1 = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], subjects2 = [&#39;a&#39;, &#39;b&#39;, &#39;d&#39;]
+        jaccard_score(subjects1, subjects2, average=&#39;macro&#39;) = (1 + 1 + 0) / 3 = 0.66
+
+        - the Jaccard similarity for &#39;a&#39; is 1 because &#39;a&#39; is in both subjects1 and subjects2
+        - the Jaccard similarity for &#39;b&#39; is 1 because &#39;b&#39; is in both subjects1 and subjects2
+        - the Jaccard similarity for &#39;c&#39; is 0 because &#39;c&#39; is in subjects1 but not in subjects2
+        - the Jaccard similarity for &#39;d&#39; is 0 because &#39;d&#39; is in subjects2 but not in subjects1
+        
+        The &#39;macro&#39; average is the unweighted mean of the Jaccard similarities for each subject in this case, the &#39;macro&#39; 
+        average is (1 + 1 + 0 + 0) / 4 = 0.5
+            
+        
+    Args:
+        subjects1 (list): A list of subjects from the first news.
+        subjects2 (list): A list of subjects from the second news.
+
+    Returns:
+        float: The Jaccard similarity between the two subject sets.
+
+    Reference:
+        https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html
+    &#34;&#34;&#34;
+    return jaccard_score(subjects1, subjects2, average=&#39;macro&#39;) </code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.keep_columns"><code class="name flex">
+<span>def <span class="ident">keep_columns</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Select and rename specific columns from the DataFrame and drop the rest.
+Use the columns from the 'columns' attribute.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def keep_columns(self) -&gt; None:
+    &#34;&#34;&#34;
+    Select and rename specific columns from the DataFrame and drop the rest. 
+    Use the columns from the &#39;columns&#39; attribute.
+    &#34;&#34;&#34;
+    self.df = self.df[self.columns]
+    self.df.rename(columns={&#39;data.versionCreated&#39;: &#39;date&#39;, &#39;data.headline&#39;: &#39;headline&#39;, &#39;data.body&#39;: &#39;body&#39;, &#39;data.subjects&#39;: &#39;subjects&#39;}, inplace=True)</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.load_news"><code class="name flex">
+<span>def <span class="ident">load_news</span></span>(<span>self, directory: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load news data from JSON files in a given directory. It iterates over the files, reads
+each file using pd.read_json, and concatenates the resulting DataFrame to the main DataFrame (self.df).</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>directory</code></strong> :&ensp;<code>str</code></dt>
+<dd>The directory containing the json files.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_news(self, directory: str) -&gt; None:
+    &#34;&#34;&#34;
+    Load news data from JSON files in a given directory. It iterates over the files, reads 
+    each file using pd.read_json, and concatenates the resulting DataFrame to the main DataFrame (self.df).
+
+    Args:
+        directory (str): The directory containing the json files.
+    &#34;&#34;&#34;
+    # initialize the dataframe (empty)
+    self.df = pd.DataFrame()
+
+    # iterate over all json files in the directory
+    for filename in os.listdir(directory):
+        # check the correct file extension
+        if filename.endswith(&#34;.txt.gz&#34;):
+            filepath = os.path.join(directory, filename)
+            # read the json file
+            with gzip.open(filepath, &#39;r&#39;) as f:
+                news = pd.read_json(f)
+
+            # append the data from the current file to main dataframe (self.df)
+            self.df = pd.concat([self.df, pd.json_normalize(news[&#39;Items&#39;])])</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.load_news_codes"><code class="name flex">
+<span>def <span class="ident">load_news_codes</span></span>(<span>self, path: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load the news codes file into a DataFrame and sets the index for quick access.
+The codes are used later for filtering valid subjects.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>path</code></strong> :&ensp;<code>str</code></dt>
+<dd>The path to the news codes file.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_news_codes(self, path: str) -&gt; None:
+    &#34;&#34;&#34;
+    Load the news codes file into a DataFrame and sets the index for quick access. 
+    The codes are used later for filtering valid subjects.
+
+    Args:
+        path (str): The path to the news codes file.
+    &#34;&#34;&#34;
+    self.df_codes = pd.read_csv(path, sep=&#39;;&#39;)
+    self.df_codes.set_index(&#39;Code&#39;, inplace=True)
+    self.valid_subjects = set(self.df_codes.index)</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.preprocess"><code class="name flex">
+<span>def <span class="ident">preprocess</span></span>(<span>self, file: str, min_appearances: int, max_appearances: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Preprocess the news data by applying all the preprocessing steps.</p>
+<p>In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load
+news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects,
+sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>file</code></strong> :&ensp;<code>str</code></dt>
+<dd>The path to the news data file.</dd>
+<dt><strong><code>min_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimum number of times a subject must appear to be kept.</dd>
+<dt><strong><code>max_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximum number of times a subject must appear to be kept.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def preprocess(self, file: str, min_appearances: int, max_appearances: int) -&gt; None:
+    &#34;&#34;&#34;
+    Preprocess the news data by applying all the preprocessing steps.
+
+    In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load 
+    news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects, 
+    sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.
+
+    Args:
+        file (str): The path to the news data file.
+        min_appearances (int): The minimum number of times a subject must appear to be kept.
+        max_appearances (int): The maximum number of times a subject must appear to be kept.
+    &#34;&#34;&#34;
+    print(&#34;Preprocessing news data...&#34;)
+
+    # load the news data
+    self.load_news(file)
+    print(f&#34;Size before filtering: {self.df.shape}.&#34;)
+
+    # apply the preprocessing steps
+    self.filter_lang()
+    self.keep_columns()
+    self.drop_duplicates()
+    self.filter_valid_subjects()
+    self.filter_unique_subjects_per_news()
+    self.sort_subjects()
+    self.filter_subject_appearances(min_appearances, max_appearances)
+    self.filter_subjects_count()
+    self.filter_empty_subjects()
+
+    # reset the index
+    self.df.reset_index(drop=True, inplace=True)
+
+    print(f&#34;Size after filtering: {self.df.shape}.&#34;)
+    print(&#34;Preprocessing complete.&#34;)</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.preprocess_debug"><code class="name flex">
+<span>def <span class="ident">preprocess_debug</span></span>(<span>self, file: str, min_appearances: int, max_appearances: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method is similar to <code>preprocess</code>, but it prints the size of the DataFrame after
+each preprocessing step. It provides additional information for debugging and testing purposes.</p>
+<p>In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load
+news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects,
+sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>file</code></strong> :&ensp;<code>str</code></dt>
+<dd>The path to the news data file.</dd>
+<dt><strong><code>min_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimum number of times a subject must appear to be kept.</dd>
+<dt><strong><code>max_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximum number of times a subject must appear to be kept.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def preprocess_debug(self, file: str, min_appearances: int, max_appearances: int) -&gt; None:
+    &#34;&#34;&#34;
+    Method is similar to `preprocess`, but it prints the size of the DataFrame after 
+    each preprocessing step. It provides additional information for debugging and testing purposes.
+
+    In details, it combines all the preprocessing steps in a specific order. It calls the relevant methods to load 
+    news data, filter by language, keep columns, drop duplicates, filter valid subjects, filter unique subjects, 
+    sort subjects, filter subjects count, filter subject appearances, filter empty subjects, and reset the DataFrame index.
+
+    Args:
+        file (str): The path to the news data file.
+        min_appearances (int): The minimum number of times a subject must appear to be kept.
+        max_appearances (int): The maximum number of times a subject must appear to be kept.
+    &#34;&#34;&#34;
+    # load the news data
+    print(&#34;Preprocessing news data... (debug mode)&#34;)
+    self.load_news(file)
+
+    # apply the preprocessing steps
+    print(f&#34;Size before filtering: {self.df.shape}.&#34;)
+    self.filter_lang()
+    print(f&#34;Size after filtering language: {self.df.shape}.&#34;)
+    self.keep_columns()
+    print(f&#34;Size after keeping columns: {self.df.shape}.&#34;)
+    self.drop_duplicates()
+    print(f&#34;Size after dropping duplicates: {self.df.shape}.&#34;)
+    self.filter_valid_subjects()
+    print(f&#34;Size after filtering valid subjects: {self.df.shape}.&#34;)
+    self.filter_unique_subjects_per_news()
+    print(f&#34;Size after filtering unique subjects per news: {self.df.shape}.&#34;)
+    self.sort_subjects()
+    print(f&#34;Size after sorting subjects: {self.df.shape}.&#34;)
+    self.filter_subject_appearances(min_appearances, max_appearances)
+    print(f&#34;Size after filtering subjects appearances: {self.df.shape}.&#34;)
+    self.filter_subjects_count()
+    print(f&#34;Size after filtering subjects count: {self.df.shape}.&#34;)
+
+    print(&#34;Subjects value counts before filtering empty subjects: &#34;)
+    # print value counts of subjects
+    self.df.reset_index(drop=True, inplace=True)
+    # flatten the subjects list to get a list of all subjects in the dataframe
+    subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+    # count the number of times each subject appears
+    subject_counts = pd.Series(subjects).value_counts()
+    print(&#34;Head of subjects value counts: &#34;)
+    print(subject_counts.head(5))
+    print(&#34;Tail of subjects value counts: &#34;)
+    print(subject_counts.tail(5))
+
+    self.filter_empty_subjects()
+    print(f&#34;Size after filtering empty subjects: {self.df.shape}.&#34;)
+
+    print(&#34;Subjects value counts after filtering empty subjects: &#34;)
+    # print value counts of subjects
+    self.df.reset_index(drop=True, inplace=True)
+    # flatten the subjects list to get a list of all subjects
+    subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+    # count the number of times each subject appears
+    subject_counts = pd.Series(subjects).value_counts()
+    print(&#34;Head of subjects value counts: &#34;)
+    print(subject_counts.head(5))
+    print(&#34;Tail of subjects value counts: &#34;)
+    print(subject_counts.tail(5))
+
+    print(&#34;Preprocessing complete. (debug mode)&#34;)</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.process"><code class="name flex">
+<span>def <span class="ident">process</span></span>(<span>self, file_code: str, file_news: str, min_appearances: int = 100, max_appearances: int = inf, debug: bool = False) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Complete the processing of the news data including loading the news codes, and preprocessing the news data.
+The default values for subjects apppearances are set based on the distribution of
+the training data (for more information, see the notebook <code>data_exploration.ipynb</code>).
+</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>file_code</code></strong> :&ensp;<code>str</code></dt>
+<dd>The path to the news codes file.</dd>
+<dt><strong><code>file_news</code></strong> :&ensp;<code>str</code></dt>
+<dd>The path to the news data file.</dd>
+<dt><strong><code>min_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The minimum number of times a subject must appear to be kept.</dd>
+<dt><strong><code>max_appearances</code></strong> :&ensp;<code>int</code></dt>
+<dd>The maximum number of times a subject must appear to be kept.</dd>
+<dt><strong><code>debug</code></strong> :&ensp;<code>bool</code></dt>
+<dd>If True, print the size of the data after each step.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def process(self, file_code: str, file_news: str, min_appearances: int = 100, max_appearances: int = np.inf, debug: bool = False) -&gt; None:
+    &#34;&#34;&#34;
+    Complete the processing of the news data including loading the news codes, and preprocessing the news data. 
+    The default values for subjects apppearances are set based on the distribution of 
+    the training data (for more information, see the notebook `data_exploration.ipynb`).  
+
+    Args:
+        file_code (str): The path to the news codes file.
+        file_news (str): The path to the news data file.
+        min_appearances (int): The minimum number of times a subject must appear to be kept.
+        max_appearances (int): The maximum number of times a subject must appear to be kept.
+        debug (bool): If True, print the size of the data after each step.
+    &#34;&#34;&#34;
+    # load the news codes
+    self.load_news_codes(file_code)
+    # preprocess the news data
+    if debug:
+        self.preprocess_debug(file_news, min_appearances, max_appearances)
+    else:
+        self.preprocess(file_news, min_appearances, max_appearances)       </code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.select_top_subjects_per_news"><code class="name flex">
+<span>def <span class="ident">select_top_subjects_per_news</span></span>(<span>self, n: int = 5) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Select the top <code>n</code> subjects per news based on their frequency in the dataset. It uses the <code>Counter</code> class to count the frequency
+of each subject and selects the top n subjects per news.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of subjects to keep per news.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def select_top_subjects_per_news(self, n: int = 5) -&gt; None:
+    &#34;&#34;&#34;
+    Select the top `n` subjects per news based on their frequency in the dataset. It uses the `Counter` class to count the frequency 
+    of each subject and selects the top n subjects per news.
+
+    Args:
+        n (int): The number of subjects to keep per news.
+    &#34;&#34;&#34;
+    # flatten the subjects list for each news
+    all_subjects = [s for sublist in self.df[&#39;subjects&#39;].tolist() for s in sublist]
+
+    # count the frequency of each subject in the dataset
+    subject_counts = Counter(all_subjects)
+
+    # function to get the frequency of a subject
+    def get_subject_frequency(subject):
+        return subject_counts[subject]
+
+    # select the top n subjects per news based on their frequency in the dataset
+    self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: sorted(subjects, key=get_subject_frequency, reverse=True)[:n])</code></pre>
+</details>
+</dd>
+<dt id="NewsProcessor.NewsProcessor.sort_subjects"><code class="name flex">
+<span>def <span class="ident">sort_subjects</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sort the 'subjects' for each news alphabetically. This ensures that the same subjects are represented in the same order, making it
+easier to compare subjects across news.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def sort_subjects(self) -&gt; None:
+    &#34;&#34;&#34; 
+    Sort the &#39;subjects&#39; for each news alphabetically. This ensures that the same subjects are represented in the same order, making it 
+    easier to compare subjects across news.
+    &#34;&#34;&#34;
+    self.df[&#39;subjects&#39;] = self.df[&#39;subjects&#39;].apply(lambda subjects: sorted(subjects))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="NewsProcessor.NewsProcessor" href="#NewsProcessor.NewsProcessor">NewsProcessor</a></code></h4>
+<ul class="">
+<li><code><a title="NewsProcessor.NewsProcessor.calculate_similarities" href="#NewsProcessor.NewsProcessor.calculate_similarities">calculate_similarities</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.cosine_similarity" href="#NewsProcessor.NewsProcessor.cosine_similarity">cosine_similarity</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.create_random_pairs_headline" href="#NewsProcessor.NewsProcessor.create_random_pairs_headline">create_random_pairs_headline</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.drop_duplicates" href="#NewsProcessor.NewsProcessor.drop_duplicates">drop_duplicates</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.encode_subjects" href="#NewsProcessor.NewsProcessor.encode_subjects">encode_subjects</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.filter_empty_subjects" href="#NewsProcessor.NewsProcessor.filter_empty_subjects">filter_empty_subjects</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.filter_lang" href="#NewsProcessor.NewsProcessor.filter_lang">filter_lang</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.filter_similar_headlines" href="#NewsProcessor.NewsProcessor.filter_similar_headlines">filter_similar_headlines</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.filter_subject_appearances" href="#NewsProcessor.NewsProcessor.filter_subject_appearances">filter_subject_appearances</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.filter_subjects_count" href="#NewsProcessor.NewsProcessor.filter_subjects_count">filter_subjects_count</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.filter_unique_subjects_per_news" href="#NewsProcessor.NewsProcessor.filter_unique_subjects_per_news">filter_unique_subjects_per_news</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.filter_valid_subjects" href="#NewsProcessor.NewsProcessor.filter_valid_subjects">filter_valid_subjects</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.generate_pairs" href="#NewsProcessor.NewsProcessor.generate_pairs">generate_pairs</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.get_news" href="#NewsProcessor.NewsProcessor.get_news">get_news</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.get_news_codes" href="#NewsProcessor.NewsProcessor.get_news_codes">get_news_codes</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.jaccard_similarity" href="#NewsProcessor.NewsProcessor.jaccard_similarity">jaccard_similarity</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.keep_columns" href="#NewsProcessor.NewsProcessor.keep_columns">keep_columns</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.load_news" href="#NewsProcessor.NewsProcessor.load_news">load_news</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.load_news_codes" href="#NewsProcessor.NewsProcessor.load_news_codes">load_news_codes</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.preprocess" href="#NewsProcessor.NewsProcessor.preprocess">preprocess</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.preprocess_debug" href="#NewsProcessor.NewsProcessor.preprocess_debug">preprocess_debug</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.process" href="#NewsProcessor.NewsProcessor.process">process</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.select_top_subjects_per_news" href="#NewsProcessor.NewsProcessor.select_top_subjects_per_news">select_top_subjects_per_news</a></code></li>
+<li><code><a title="NewsProcessor.NewsProcessor.sort_subjects" href="#NewsProcessor.NewsProcessor.sort_subjects">sort_subjects</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
